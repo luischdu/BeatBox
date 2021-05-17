@@ -19,7 +19,7 @@ const ButtonStyle = styled.button`
 `;
 
 const Board = () => {
-  const [state, setstate] = useState("Q");
+  const [state] = useState("Q");
 
   const { data } = useFetch(
     `https://api-drum-box.herokuapp.com/audio/${state}`
@@ -35,7 +35,6 @@ const Board = () => {
   };
 
   document.addEventListener("keyup", handleClick);
-
 
   return (
     <BoardStyle className="container row row-cols-3 row-cols-lg-3 g-lg-3">
